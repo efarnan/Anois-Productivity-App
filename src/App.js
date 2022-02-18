@@ -1,6 +1,7 @@
 import './App.css';
 import {WeatherMain} from './components/weather-main';
 import StatusLine from './components/statusline';
+import Quotes from './components/quotes';
 import { useEffect, useState } from 'react';
 
  
@@ -13,8 +14,8 @@ function App() {
     setCurrentWeather(data.current)
     setLocation(data.location)
    })
-  }, [])  
-  
+  }, [])   
+
   const [tasks, setTaks] = useState([]);
   useEffect( () => {
     console.log("using effect")
@@ -45,9 +46,13 @@ function App() {
 
   return (
     <div className="App">
+      <div>
       {
         weather ? <WeatherMain location={location} temperature={weather.temp_c} condition={weather.condition}/> : "Loading..."
       }
+      </div>
+      
+        <Quotes/>
 
       <section>
         <StatusLine 

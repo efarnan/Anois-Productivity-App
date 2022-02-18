@@ -71,3 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ###Reference
 CodePunk (Weather Widget) - https://www.youtube.com/watch?v=A-BQZIhC3X8&t=2128s
+
+https://www.youtube.com/watch?v=BdCCpAICXVc
+
+https://medium.com/star-gazers/random-quotes-generator-with-react-2534fc05c29c
+QUOTE API: https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json

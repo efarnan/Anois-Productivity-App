@@ -1,4 +1,4 @@
-import Task from "./task";
+import Task from './components/task';
 
 export default function StatusLine(props){
 const {status, tasks, addTask, deleteTask, addEmptyTask, moveTask}=props

@@ -46,6 +46,14 @@
     padding: 20px;
 }
 
+.quotes-container{
+    background-color: yellow;
+    display: flex;
+    border-radius: 25px;
+    width: 25%;
+    padding: 10px;
+}
+
 .statusLine{
     display:flex;
     width: 100%;
