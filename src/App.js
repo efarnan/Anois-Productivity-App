@@ -1,6 +1,8 @@
 import './App.css';
 import {WeatherMain} from './components/weather-main';
+import StatusLine from './components/statusline';
 import { useEffect, useState } from 'react';
+
  
 function App() {
   const [weather, setCurrentWeather] = useState(false)
@@ -12,7 +14,34 @@ function App() {
     setLocation(data.location)
    })
   }, [])  
- 
+  
+  const [tasks, setTaks] = useState([]);
+  useEffect( () => {
+    console.log("using effect")
+  }, []);
+
+  function addEmptyTask(status){
+
+  }
+
+  function addTask(taskToAdd){
+
+  } 
+
+  function deleteTask(taskId){
+
+  }
+  function moveTask(id, newStatus){
+
+  }
+  function saveTasksToLocalStorage(tasks){
+
+  }
+
+  function loadTasksFromLocalStorage(){
+
+  }
+
 
   return (
     <div className="App">
@@ -20,6 +49,32 @@ function App() {
         weather ? <WeatherMain location={location} temperature={weather.temp_c} condition={weather.condition}/> : "Loading..."
       }
 
+      <section>
+        <StatusLine 
+        task={tasks}
+        addEmptyTask={addEmptyTask}
+        addTask={addTask}
+        deleteTask={deleteTask}
+        moveTask={moveTask}
+        status="To-Do"
+        />
+         <StatusLine 
+        tasks={tasks}
+        addEmptyTask={addEmptyTask}
+        addTask={addTask}
+        deleteTask={deleteTask}
+        moveTask={moveTask}
+        status="In Progress"
+        />
+         <StatusLine 
+        tasks={tasks}
+        addEmptyTask={addEmptyTask}
+        addTask={addTask}
+        deleteTask={deleteTask}
+        moveTask={moveTask}
+        status="Done"
+        />
+      </section>
     </div>
   );
 }
