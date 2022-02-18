@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wmain{
+    background-color: blue;
+    border-radius: 25px;
+}
+
+.condition{
+    font-size: 21px;
+    color: #fff;
+    padding: 10px;
+}
+
+.temperature{
+    font-size: 21px;
+    color: #fff;
+}
+
+.location-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.location-info .location{
+    flex: 1;
+    padding: 10px;
+}
+
+.location-title{
+    text-transform: uppercase;
+}
+
+.location-info .icon{
+    width: 30px;
+}
