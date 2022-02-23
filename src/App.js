@@ -2,6 +2,7 @@ import './App.css';
 import {WeatherMain} from './components/weather-main';
 import StatusLine from './components/statusline';
 import Quotes from './components/quotes';
+import Navbar from './components/navbar';
 import { useEffect, useState } from 'react';
 import { WiSolarEclipse } from 'react-icons/wi';
 
@@ -47,41 +48,48 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-      {
-        weather ? <WeatherMain location={location} temperature={weather.temp_c} condition={weather.condition}/> : "Loading..."
-      }
-      </div>
-      <WiSolarEclipse className="logo" size={100}/>
-      
-      <Quotes/>
+      <Navbar/>
+      <main>
 
-      <section>
-        <StatusLine 
-        task={tasks}
-        addEmptyTask={addEmptyTask}
-        addTask={addTask}
-        deleteTask={deleteTask}
-        moveTask={moveTask}
-        status="To-Do"
-        />
+        <section className="section-1">
+          <div>
+            {
+          weather ? <WeatherMain location={location} temperature={weather.temp_c} condition={weather.condition}/> : "Loading..."
+            }
+          </div>
+
+          <WiSolarEclipse className="logo" size={100}/>
+      
+          <Quotes/>
+        </section>
+
+        <section className='section-2'>
+          <StatusLine 
+          task={tasks}
+          addEmptyTask={addEmptyTask}
+          addTask={addTask}
+          deleteTask={deleteTask}
+          moveTask={moveTask}
+          status="To-Do"
+          />
          <StatusLine 
-        tasks={tasks}
-        addEmptyTask={addEmptyTask}
-        addTask={addTask}
-        deleteTask={deleteTask}
-        moveTask={moveTask}
-        status="In Progress"
-        />
+          tasks={tasks}
+         addEmptyTask={addEmptyTask}
+         addTask={addTask}
+         deleteTask={deleteTask}
+         moveTask={moveTask}
+         status="In Progress"
+          />
          <StatusLine 
-        tasks={tasks}
-        addEmptyTask={addEmptyTask}
-        addTask={addTask}
-        deleteTask={deleteTask}
-        moveTask={moveTask}
-        status="Done"
-        />
-      </section>
+          tasks={tasks}
+          addEmptyTask={addEmptyTask}
+          addTask={addTask}
+          deleteTask={deleteTask}
+          moveTask={moveTask}
+          status="Done"
+          />
+        </section>
+      </main>
     </div>
   );
 }
