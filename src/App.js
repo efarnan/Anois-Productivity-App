@@ -3,6 +3,7 @@ import {WeatherMain} from './components/weather-main';
 import StatusLine from './components/statusline';
 import Quotes from './components/quotes';
 import { useEffect, useState } from 'react';
+import { WiSolarEclipse } from 'react-icons/wi';
 
  
 function App() {
@@ -51,8 +52,9 @@ function App() {
         weather ? <WeatherMain location={location} temperature={weather.temp_c} condition={weather.condition}/> : "Loading..."
       }
       </div>
+      <WiSolarEclipse className="logo" size={100}/>
       
-        <Quotes/>
+      <Quotes/>
 
       <section>
         <StatusLine 
