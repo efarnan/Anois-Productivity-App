@@ -4,7 +4,7 @@ import StatusLine from './components/statusline';
 import Quotes from './components/quotes';
 import Navbar from './components/navbar';
 import { useEffect, useState } from 'react';
-import { WiSolarEclipse } from 'react-icons/wi';
+import { FaAdjust } from 'react-icons/fa';
 
  
 function App() {
@@ -58,7 +58,7 @@ function App() {
             }
           </div>
 
-          <WiSolarEclipse className="logo" size={100}/>
+          <FaAdjust className="logo" size={100}/>
       
           <Quotes/>
         </section>

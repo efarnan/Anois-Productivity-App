@@ -38,6 +38,13 @@ return (
         disabled={collapsed}
         defaultValue={task.title}
         />
+        <textarea
+        row="2"
+        className="description input"
+        name="descritption"
+        placeholder="Enter Description"
+        defaultValue={task.description}
+        />
         <div className="urgencyLabels">
             <label className={'low ${urgencyLevel ==="low" ? "selected" : ""}'}/>
             <FaCircle/>
